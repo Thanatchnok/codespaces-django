@@ -1,0 +1,642 @@
+.mockups-desktop {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.mockups-desktop .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1440px;
+  height: 1235px;
+  position: relative;
+}
+
+.mockups-desktop .slidshow {
+  position: absolute;
+  width: 1109px;
+  height: 300px;
+  top: 186px;
+  left: 185px;
+}
+
+.mockups-desktop .slide-show {
+  position: absolute;
+  width: 1104px;
+  height: 244px;
+  top: 513px;
+  left: 235px;
+}
+
+.mockups-desktop .picture {
+  position: absolute;
+  width: 1109px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.mockups-desktop .recent {
+  top: 903px;
+  left: 26px;
+  position: absolute;
+  width: 331px;
+  height: 212px;
+}
+
+.mockups-desktop .overlap {
+  position: relative;
+  height: 212px;
+}
+
+.mockups-desktop .overlap-group-wrapper {
+  width: 331px;
+  position: absolute;
+  height: 212px;
+  top: 0;
+  left: 0;
+}
+
+.mockups-desktop .overlap-group {
+  position: relative;
+  width: 329px;
+  height: 212px;
+  background-color: #d9d9d9;
+}
+
+.mockups-desktop .overlap-2 {
+  position: absolute;
+  width: 130px;
+  height: 168px;
+  top: 22px;
+  left: 12px;
+}
+
+.mockups-desktop .rectangle {
+  position: absolute;
+  width: 123px;
+  height: 144px;
+  top: 12px;
+  left: 0;
+  background-color: #616161;
+}
+
+.mockups-desktop .screenshot {
+  position: absolute;
+  width: 130px;
+  height: 168px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.mockups-desktop .five-nights-at {
+  position: absolute;
+  width: 151px;
+  top: 52px;
+  left: 155px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.53px;
+  line-height: 36px;
+}
+
+.mockups-desktop .review {
+  position: absolute;
+  width: 151px;
+  height: 30px;
+  top: 148px;
+  left: 155px;
+  background-color: #000000;
+}
+
+.mockups-desktop .rate-review {
+  position: absolute;
+  top: 151px;
+  left: 178px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.35px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .overlap-wrapper {
+  top: 903px;
+  left: 837px;
+  position: absolute;
+  width: 331px;
+  height: 212px;
+}
+
+.mockups-desktop .overlap-3 {
+  position: absolute;
+  width: 123px;
+  height: 144px;
+  top: 34px;
+  left: 12px;
+  background-color: #616161;
+}
+
+.mockups-desktop .rectangle-2 {
+  top: 0;
+  position: absolute;
+  width: 123px;
+  height: 144px;
+  left: 0;
+  background-color: #616161;
+}
+
+.mockups-desktop .img {
+  position: absolute;
+  width: 123px;
+  height: 144px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.mockups-desktop .text-wrapper {
+  position: absolute;
+  top: 70px;
+  left: 144px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.53px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .overlap-4 {
+  position: absolute;
+  width: 331px;
+  height: 212px;
+  top: 903px;
+  left: 431px;
+}
+
+.mockups-desktop .overlap-5 {
+  position: relative;
+  width: 333px;
+  height: 212px;
+}
+
+.mockups-desktop .recommend {
+  width: 333px;
+  position: absolute;
+  height: 212px;
+  top: 0;
+  left: 0;
+}
+
+.mockups-desktop .text-wrapper-2 {
+  position: absolute;
+  top: 54px;
+  left: 16px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.53px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .text-wrapper-3 {
+  position: absolute;
+  top: 70px;
+  left: 194px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.53px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .screenshot-2 {
+  position: absolute;
+  width: 130px;
+  height: 168px;
+  top: 22px;
+  left: 12px;
+  object-fit: cover;
+}
+
+.mockups-desktop .group {
+  position: absolute;
+  width: 170px;
+  height: 51px;
+  top: 635px;
+  left: 1240px;
+}
+
+.mockups-desktop .div-wrapper {
+  position: relative;
+  width: 168px;
+  height: 51px;
+  background-color: #fbd300;
+  border-radius: 18px;
+}
+
+.mockups-desktop .text-wrapper-4 {
+  position: absolute;
+  top: 8px;
+  left: 42px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.53px;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .group-2 {
+  position: absolute;
+  width: 170px;
+  height: 51px;
+  top: 983px;
+  left: 1240px;
+}
+
+.mockups-desktop .ads {
+  position: absolute;
+  width: 1487px;
+  height: 84px;
+  top: 1163px;
+  left: -12px;
+}
+
+.mockups-desktop .overlap-6 {
+  position: relative;
+  width: 1485px;
+  height: 84px;
+  background-color: #fbd300;
+}
+
+.mockups-desktop .text-wrapper-5 {
+  position: absolute;
+  top: 12px;
+  left: 743px;
+  font-family: "Inter", Helvetica;
+  font-weight: 200;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.mockups-desktop .text-wrapper-6 {
+  position: absolute;
+  width: 217px;
+  top: 499px;
+  left: 31px;
+  font-family: "Mouse Memoirs", Helvetica;
+  font-weight: 400;
+  color: #263159;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.mockups-desktop .text-wrapper-7 {
+  position: absolute;
+  width: 130px;
+  top: 811px;
+  left: 38px;
+  font-family: "Mouse Memoirs", Helvetica;
+  font-weight: 400;
+  color: #263159;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.mockups-desktop .overlap-7 {
+  position: absolute;
+  width: 331px;
+  height: 212px;
+  top: 555px;
+  left: 40px;
+}
+
+.mockups-desktop .overlap-8 {
+  position: relative;
+  width: 329px;
+  height: 212px;
+  background-color: #495579;
+  border-radius: 10px;
+}
+
+.mockups-desktop .overlap-group-2 {
+  position: absolute;
+  width: 152px;
+  height: 178px;
+  top: 17px;
+  left: 12px;
+}
+
+.mockups-desktop .rectangle-3 {
+  top: 17px;
+  border-radius: 10px;
+  position: absolute;
+  width: 123px;
+  height: 144px;
+  left: 0;
+  background-color: #616161;
+}
+
+.mockups-desktop .rectangle-4 {
+  position: absolute;
+  width: 152px;
+  height: 178px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.mockups-desktop .title {
+  position: absolute;
+  width: 158px;
+  top: 22px;
+  left: 171px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.35px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .rectangle-5 {
+  position: absolute;
+  width: 133px;
+  height: 27px;
+  top: 168px;
+  left: 186px;
+  background-color: #ffffff;
+  border-radius: 11px;
+  border: 2px solid;
+  border-color: #215eba;
+}
+
+.mockups-desktop .text-wrapper-8 {
+  position: absolute;
+  width: 108px;
+  height: 15px;
+  top: 173px;
+  left: 206px;
+  font-family: "K2D", Helvetica;
+  font-weight: 700;
+  color: #000206;
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  line-height: 20.1px;
+  white-space: nowrap;
+}
+
+.mockups-desktop .vector {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 174px;
+  left: 296px;
+}
+
+.mockups-desktop .blue-cool-dad {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 49px;
+  left: 210px;
+  object-fit: cover;
+}
+
+.mockups-desktop .overlap-9 {
+  position: absolute;
+  width: 331px;
+  height: 212px;
+  top: 555px;
+  left: 429px;
+}
+
+.mockups-desktop .blue-cool-dad-2 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 49px;
+  left: 212px;
+  object-fit: cover;
+}
+
+.mockups-desktop .overlap-10 {
+  position: absolute;
+  width: 331px;
+  height: 212px;
+  top: 555px;
+  left: 818px;
+}
+
+.mockups-desktop .group-3 {
+  position: absolute;
+  width: 1539px;
+  height: 187px;
+  top: -15px;
+  left: -44px;
+}
+
+.mockups-desktop .overlap-11 {
+  position: relative;
+  width: 1537px;
+  height: 187px;
+}
+
+.mockups-desktop .header {
+  position: absolute;
+  width: 1537px;
+  height: 187px;
+  top: 0;
+  left: 0;
+  background-color: #1E2747;
+}
+
+.mockups-desktop .overlap-group-3 {
+  position: relative;
+  width: 1537px;
+  height: 187px;
+  top: 513px;
+  left: 235px;
+  background-image: url(./img/shape-with-text-1.svg);
+  background-size: 100% 100%;
+}
+
+.mockups-desktop .shape-with-text {
+  position: absolute;
+  width: 144px;
+  height: 130px;
+  top: 29px;
+  left: 70px;
+}
+
+.mockups-desktop .movie {
+  position: absolute;
+  width: 155px;
+  height: 41px;
+  top: 41px;
+  left: 957px;
+}
+
+.mockups-desktop .menu {
+  position: absolute;
+  width: 155px;
+  height: 41px;
+  top: 113px;
+  left: 1070px;
+}
+
+.mockups-desktop .tv-show {
+  position: absolute;
+  width: 155px;
+  height: 41px;
+  top: 41px;
+  left: 1188px;
+}
+
+.mockups-desktop .material-symbols-tv {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 48px;
+  left: 1185px;
+}
+
+.mockups-desktop .profile {
+  position: absolute;
+  width: 64px;
+  height: 65px;
+  top: 78px;
+  left: 1394px;
+}
+
+.mockups-desktop .ellipse {
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: -1px;
+  left: -1px;
+  object-fit: cover;
+}
+
+.mockups-desktop .search {
+  position: absolute;
+  width: 678px;
+  height: 61px;
+  top: 97px;
+  left: 243px;
+  background-color: #f4f4f4;
+  border-radius: 31px;
+}
+
+.mockups-desktop .text-wrapper-9 {
+  position: absolute;
+  width: 302px;
+  top: 22px;
+  left: 200px;
+  font-family: "Mouse Memoirs", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.mockups-desktop .logo {
+  position: absolute;
+  width: 153px;
+  height: 136px;
+  top: 25px;
+  left: 63px;
+  object-fit: cover;
+}
+
+.mockups-desktop .mingcute-menu-fill {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 121px;
+  left: 1075px;
+}
+
+.mockups-desktop .group-4 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 121px;
+  left: 1190px;
+}
+
+.mockups-desktop .icon-park-movie {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 45px;
+  left: 965px;
+}
+
+.mockups-desktop .search-2 {
+  position: absolute;
+  width: 295px;
+  height: 41px;
+  top: 107px;
+  left: 262px;
+}
+
+.mockups-desktop .search-item {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  top: 0;
+  left: 0;
+}
+
+.mockups-desktop .search-name-list-of {
+  position: absolute;
+  width: 245px;
+  top: 6px;
+  left: 48px;
+  font-family: "Manrope", Helvetica;
+  font-weight: 200;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  background: transparent;
+  border: none;
+  padding: 0;
+}

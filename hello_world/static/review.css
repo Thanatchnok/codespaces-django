@@ -1,0 +1,1095 @@
+html, body {
+
+}
+
+.search-name-list-of {
+  position: absolute;
+  width: 245px;
+  top: 6px;
+  left: 48px;
+  font-family: "Manrope", Helvetica;
+  font-weight: 200;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.comment {
+    width: 13000px;
+    height: 80px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 5px;
+}
+
+.comment .profıle-ımage {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 6px 0px 0px 6px;
+    background: #148F77;
+    border-radius: 300px;
+}
+
+.comment .profıle-ımage:hover {
+    opacity: 0.6;
+}
+
+.comment .profıle-ımage #name {
+    color: white;
+    font-size: 25px;
+    margin: 0px;
+    padding-top: 15px;
+    text-align: center;
+
+}
+
+.comment .username {
+    float: left;
+    color: #212121;
+    margin: 15px 0px 0px 5px;
+    padding: 0px;
+}
+
+.comment .username:hover {
+    color: #757575;
+}
+
+
+.comment .user-comment {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    margin-left: 9rem;
+}
+
+.comment .user-comment p {
+    color: #424242;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-size: 12px;
+    top: 35px;
+    left: -36px;
+}
+
+.comment .user-comment span {
+    color: #9E9E9E;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    left: 75px;
+    top: -13px;
+}
+
+.comment .user-comment span:hover {
+    color: #616161;
+}
+
+#ds p {
+    font-size: 12px;
+    color: #212121;
+    opacity: 0.6;
+}
+
+#ds p:hover {
+    cursor: pointer;
+    opacity: 1.0;
+}
+
+
+input {
+    
+    height: 50px;
+    margin: 10px;
+    width: 1200px;
+}
+
+
+.rowuser {
+    width: 26rem;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    /* You need this... */
+
+}
+
+.userimg {
+    margin-right: 20px;
+}
+
+/*HTML CSS JSResult Skip Results Iframe
+EDIT ON*/
+
+
+.add_comment {
+    width: 1300px;
+    border: 1px solid #333;
+    padding: 15px 10px;
+}
+
+.add_comment h2 {
+    text-align: center;
+    margin-bottom: 15px
+}
+
+textarea {
+    height: 20px;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    margin-bottom: 10px;
+    resize: none;
+    outline: none;
+    transition: .5s
+}
+
+input[type="submit"],
+button {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    color: #fff;
+    background-color: #273c75
+}
+
+button {
+    color: #333;
+    background-color: transparent
+}
+
+.btn {
+    display: none
+}
+
+
+
+.desktop-review {
+  margin-top: -67rem;
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .frameofbody {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        padding: 2.2rem 5.9rem 4.1rem 4.2rem;
+        width: 100%;
+
+
+        .Showarea {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            height: 46.7rem;
+            margin-left: -30rem;
+            justify-content: center;
+            /* Center content vertically */
+            width: 100%;
+            /* Full width */
+        }
+
+
+        .Picmovie {
+            border-radius: 1rem;
+            flex-shrink: 0;
+            height: 40;
+            margin-right: 7rem;
+            object-fit: cover;
+            vertical-align: top;
+            width: 20rem;
+        }
+
+        .rightframetop {
+            align-items: center;
+            background-color: #cdf3fc;
+            border-radius: 3rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            height: 25rem;
+            margin: 0rem 0rem 5rem 0rem;
+            padding: 3rem 4rem 4.6rem 6.55rem;
+            width: 45rem;
+
+            .textrighttopframe {
+                align-items: center;
+                display: flex;
+                flex-shrink: 0;
+                margin: 0rem 10rem 0.9rem 0rem;
+                width: calc(100% - 5.45rem);
+
+                .text1 {
+                    color: #000000;
+                    flex-shrink: 0;
+                    font-family: Inter, 'Source Sans Pro';
+                    font-size: 2rem;
+                    font-weight: 800;
+                    letter-spacing: -0.0792rem;
+                    line-height: 1.5;
+                    margin-right: 1rem;
+                    margin-top: -1rem;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+
+                .text2 {
+                    color: #080808;
+                    flex-shrink: 0;
+                    font-family: Inter, 'Source Sans Pro';
+                    font-size: 1rem;
+                    font-weight: 500;
+                    letter-spacing: -0.0352rem;
+                    line-height: 1.5;
+                    margin-top: -1.5rem;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+
+            .rightframebelow {
+                align-items: center;
+                display: flex;
+                flex-shrink: 0;
+                height: 19rem;
+                margin-left: 6.5rem;
+                margin-top: 2rem;
+
+                .picchosenone {
+                    flex-shrink: 0;
+                    height: 10rem;
+                    margin-right: 1rem;
+                    margin-top: -12rem;
+                    object-fit: cover;
+                    vertical-align: top;
+                    width: 10rem;
+                }
+
+                .picpopcorn {
+                    flex-shrink: 0;
+                    height: 10rem;
+                    margin: -12rem -1rem 0.8rem 0rem;
+                    object-fit: contain;
+                    vertical-align: top;
+                    width: 10rem;
+                }
+
+                .textrightbelowframe2 {
+                    flex-shrink: 0;
+                    height: calc(100% - 5.8rem);
+                    margin: 2.4rem 0rem 3.4rem 0rem;
+                    width: 26.2rem;
+
+                    .sub1textrightbelowframe {
+                        height: 10.8rem;
+                        position: relative;
+                        width: 14.1rem;
+
+                        .text3 {
+                            color: #000000;
+                            font-family: Inter, 'Source Sans Pro';
+                            font-size: 5rem;
+                            font-weight: 800;
+                            height: 9.6rem;
+                            left: 0rem;
+                            letter-spacing: -0.1408rem;
+                            line-height: 1.5;
+                            position: absolute;
+                            text-align: center;
+                            top: -10rem;
+                            white-space: nowrap;
+                            width: 14.1rem;
+                        }
+
+                        .text4 {
+                            color: #080808;
+                            font-family: Inter, 'Source Sans Pro';
+                            font-size: 1rem;
+                            font-weight: 500;
+                            height: 2.4rem;
+                            left: 0rem;
+                            letter-spacing: -0.0352rem;
+                            line-height: 1.5;
+                            position: absolute;
+                            text-align: center;
+                            top: 1rem;
+                            white-space: nowrap;
+                            width: 11.9rem;
+                        }
+                    }
+
+                    .text5 {
+                        color: #080808;
+                        font-family: Inter, 'Source Sans Pro';
+                        font-size: 1rem;
+                        font-weight: 500;
+                        line-height: 1.5;
+                        margin-top: -7rem;
+                        margin-left: -2.5rem;
+                        text-align: center;
+                        white-space: nowrap;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+ }
+
+ul,
+li {
+    list-style: none;
+}
+
+input {
+    border: none;
+}
+
+body {
+    width: 153.7rem;
+}
+
+
+
+.comment .comment-text {
+    float: left; /* Align the comment text to the left */
+}
+
+.comment .comment-actions {
+    float: right; /* Align the buttons to the right */
+}
+
+.comment .edit-button,
+.comment .save-button {
+    /* Add styling for the buttons */
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.comment .edit-button:hover,
+.comment .save-button:hover {
+    background-color: #235a9d;
+}
+
+
+.header-wXR {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    height: 18.7rem;
+    padding: 2.2rem 7.9rem 2.6rem 6.3rem;
+    width: 100%;
+
+    .logo-n2F {
+      border-radius: 7.75rem;
+      flex-shrink: 0;
+      height: 13.6rem;
+      margin: 0.3rem 2.7rem 0rem 0rem;
+      object-fit: cover;
+      vertical-align: top;
+      width: 15.3rem;
+    }
+    .auto-group-gmkh-frj {
+      flex-shrink: 0;
+      margin: 0rem 4.675rem 0.3rem 0rem;
+      width: 67.8rem;
+
+      .innovitech-PXq {
+        color: #ffffff;
+        font-family: Mouse Memoirs, 'Source Sans Pro';
+        font-size: 6.4rem;
+        font-weight: 400;
+        line-height: 1.145;
+        margin-bottom: 0.1rem;
+        text-align: center;
+        white-space: nowrap;
+        width: 100%;
+      }
+      .auto-group-u61y-TXh {
+        background-color: #f4f4f4;
+        border-radius: 3.1rem;
+        box-sizing: border-box;
+        height: 6.1rem;
+        padding: 1rem 1.9rem;
+        width: 100%;
+
+        .search-z1q {
+          align-items: center;
+          box-sizing: border-box;
+          display: flex;
+          height: 100%;
+          padding: 0.513rem 0rem 0.513rem 0.513rem;
+          width: 27.6rem;
+
+          .search-item-JHR {
+            flex-shrink: 0;
+            height: 3.075rem;
+            margin-right: 1.2125rem;
+            object-fit: contain;
+            vertical-align: top;
+            width: 3.075rem;
+          }
+          .search-name-list-of-movie-cZ1 {
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Manrope, 'Source Sans Pro';
+            font-size: 2rem;
+            font-weight: 200;
+            line-height: 1.365;
+            margin-bottom: 0.1rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+}
+
+.desktop-myblog {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+  }
+  
+  .desktop-myblog .div {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1440px;
+    height: 1235px;
+    position: relative;
+  }
+  
+  .desktop-myblog .overlap {
+    position: absolute;
+    width: 1537px;
+    height: 187px;
+    top: -7px;
+    left: -47px;
+  }
+  
+  .desktop-myblog .header {
+    position: absolute;
+    width: 1537px;
+    height: 187px;
+    top: 0;
+    left: 0;
+    background-color: #1E2747;
+  }
+  
+  .desktop-myblog .overlap-group {
+    position: relative;
+    width: 1537px;
+    height: 187px;
+    top: -4028px;
+    left: 235px;
+    background-image: url(./img/shape-with-text.svg);
+    background-size: 100% 100%;
+  }
+  
+  .desktop-myblog .shape-with-text {
+    position: absolute;
+    width: 144px;
+    height: 130px;
+    top: 29px;
+    left: 70px;
+  }
+  
+  .desktop-myblog .movie {
+    position: absolute;
+    width: 155px;
+    height: 41px;
+    top: 41px;
+    left: 964px;
+  }
+  
+  .desktop-myblog .menu {
+    position: absolute;
+    width: 155px;
+    height: 41px;
+    top: 113px;
+    left: 1070px;
+  }
+  
+  .desktop-myblog .tv-show {
+    position: absolute;
+    width: 155px;
+    height: 41px;
+    top: 41px;
+    left: 1188px;
+  }
+  
+  .desktop-myblog .profile {
+    position: absolute;
+    width: 64px;
+    height: 65px;
+    top: 78px;
+    left: 1397px;
+  }
+  
+  .desktop-myblog .ellipse {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: -1px;
+    left: -1px;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .search {
+    position: absolute;
+    width: 678px;
+    height: 61px;
+    top: 83px;
+    left: 249px;
+    background-color: #f4f4f4;
+    border-radius: 31px;
+  }
+  
+  .desktop-myblog .search-2 {
+    position: absolute;
+    width: 295px;
+    height: 41px;
+    top: 97px;
+    left: 264px;
+  }
+  
+  .desktop-myblog .search-name-list-of {
+    position: absolute;
+    width: 245px;
+    top: 6px;
+    left: 48px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 200;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  .desktop-myblog .search-item {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    top: 0;
+    left: 0;
+  }
+  
+  .desktop-myblog .text-wrapper {
+    position: absolute;
+    width: 302px;
+    top: 7px;
+    left: 206px;
+    font-family: "Mouse Memoirs", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 64px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .desktop-myblog .logo {
+    position: absolute;
+    width: 153px;
+    height: 136px;
+    top: 25px;
+    left: 66px;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .mingcute-menu-fill {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 121px;
+    left: 1078px;
+  }
+  
+  .desktop-myblog .group {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 121px;
+    left: 1193px;
+  }
+  
+  .desktop-myblog .icon-park-movie {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 45px;
+    left: 968px;
+  }
+  
+  .desktop-myblog .text-box {
+    left: 1143px;
+    position: absolute;
+    width: 104px;
+    height: 45px;
+    top: -4125px;
+  }
+  
+  .desktop-myblog .img {
+    left: 1336px;
+    position: absolute;
+    width: 104px;
+    height: 45px;
+    top: -4125px;
+  }
+  
+  .desktop-myblog .overlap-2 {
+    position: absolute;
+    width: 1317px;
+    height: 941px;
+    top: 222px;
+    left: 61px;
+  }
+  
+  .desktop-myblog .rectangle {
+    position: absolute;
+    width: 1317px;
+    height: 934px;
+    top: 7px;
+    left: 0;
+    background-color: #e5fdff;
+    border-radius: 17px;
+  }
+  
+  .desktop-myblog .text-wrapper-2 {
+    position: absolute;
+    width: 257px;
+    top: 39px;
+    left: 562px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #3200ff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .desktop-myblog .rectangle-2 {
+    position: absolute;
+    width: 371px;
+    height: 169px;
+    top: 171px;
+    left: 145px;
+  }
+  
+  .desktop-myblog .anna {
+    position: absolute;
+    width: 621px;
+    height: 241px;
+    top: 680px;
+    left: 677px;
+  }
+  
+  .desktop-myblog .overlap-3 {
+    position: relative;
+    width: 617px;
+    height: 241px;
+  }
+  
+  .desktop-myblog .rectangle-3 {
+    width: 617px;
+    height: 231px;
+    top: 0;
+    position: absolute;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-4 {
+    width: 283px;
+    height: 231px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .desktop-myblog .text-wrapper-3 {
+    position: absolute;
+    width: 151px;
+    top: 1px;
+    left: 332px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #595454;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .element-country {
+    position: absolute;
+    width: 254px;
+    top: 122px;
+    left: 299px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #595454;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .rectangle-wrapper {
+    width: 266px;
+    height: 10px;
+    top: 37px;
+    left: 332px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-5 {
+    width: 57px;
+    height: 10px;
+    background-color: #30d036;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .div-wrapper {
+    position: absolute;
+    width: 266px;
+    height: 10px;
+    top: 94px;
+    left: 332px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-6 {
+    width: 151px;
+    height: 10px;
+    background-color: #30d036;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .image {
+    height: 45px;
+    top: 72px;
+    left: 294px;
+    position: absolute;
+    width: 31px;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .image-2 {
+    width: 30px;
+    height: 42px;
+    top: 17px;
+    left: 294px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .image-3 {
+    width: 132px;
+    height: 53px;
+    top: 188px;
+    left: 314px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .text-wrapper-4 {
+    position: absolute;
+    width: 84px;
+    top: 304px;
+    left: 280px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #000000cc;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .rectangle-7 {
+    position: absolute;
+    width: 371px;
+    height: 169px;
+    top: 171px;
+    left: 536px;
+  }
+  
+  .desktop-myblog .text-wrapper-5 {
+    position: absolute;
+    width: 98px;
+    top: 304px;
+    left: 666px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #000000cc;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .rectangle-8 {
+    position: absolute;
+    width: 246px;
+    height: 169px;
+    top: 171px;
+    left: 927px;
+  }
+  
+  .desktop-myblog .text-wrapper-6 {
+    position: absolute;
+    width: 69px;
+    top: 304px;
+    left: 1022px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #000000cc;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .rectangle-9 {
+    position: absolute;
+    width: 1316px;
+    height: 149px;
+    top: 0;
+    left: 1px;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .ellipse-wrapper {
+    position: absolute;
+    width: 95px;
+    height: 96px;
+    top: 26px;
+    left: 752px;
+  }
+  
+  .desktop-myblog .ellipse-2 {
+    position: absolute;
+    width: 96px;
+    height: 98px;
+    top: -1px;
+    left: -1px;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .streamline-interface {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 320px;
+    left: 1210px;
+  }
+  
+  .desktop-myblog .streamline-interface-2 {
+    position: absolute;
+    width: 73px;
+    height: 62px;
+    top: 331px;
+    left: 622px;
+  }
+  
+  .desktop-myblog .list {
+    position: absolute;
+    width: 625px;
+    height: 248px;
+    top: 393px;
+    left: 12px;
+  }
+  
+  .desktop-myblog .overlap-4 {
+    position: relative;
+    width: 619px;
+    height: 248px;
+  }
+  
+  .desktop-myblog .rectangle-10 {
+    position: absolute;
+    width: 619px;
+    height: 237px;
+    top: 0;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-11 {
+    position: absolute;
+    width: 284px;
+    height: 237px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .image-4 {
+    width: 132px;
+    height: 53px;
+    top: 195px;
+    left: 303px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .text-wrapper-7 {
+    position: absolute;
+    width: 231px;
+    top: 8px;
+    left: 295px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #595454;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .element-k-country {
+    position: absolute;
+    width: 176px;
+    top: 115px;
+    left: 300px;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #595454;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .group-2 {
+    position: absolute;
+    width: 267px;
+    height: 7px;
+    top: 55px;
+    left: 333px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-12 {
+    width: 183px;
+    height: 7px;
+    background-color: #30d036;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .group-3 {
+    position: absolute;
+    width: 267px;
+    height: 127px;
+    top: 95px;
+    left: 333px;
+  }
+  
+  .desktop-myblog .overlap-group-2 {
+    position: absolute;
+    width: 267px;
+    height: 7px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-13 {
+    width: 246px;
+    height: 7px;
+    background-color: #30d036;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .rectangle-14 {
+    position: absolute;
+    width: 54px;
+    height: 21px;
+    top: 107px;
+    left: 151px;
+    background-color: #2f88ff;
+    border-radius: 10px;
+  }
+  
+  .desktop-myblog .image-5 {
+    width: 31px;
+    height: 31px;
+    top: 80px;
+    left: 295px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .text-wrapper-8 {
+    width: 44px;
+    top: 202px;
+    left: 494px;
+    position: absolute;
+    font-family: "Manrope", Helvetica;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .desktop-myblog .image-6 {
+    width: 30px;
+    height: 30px;
+    top: 41px;
+    left: 295px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .image-7 {
+    width: 35px;
+    height: 35px;
+    top: 195px;
+    left: 565px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .desktop-myblog .overlap-wrapper {
+    position: absolute;
+    width: 625px;
+    height: 248px;
+  }
+

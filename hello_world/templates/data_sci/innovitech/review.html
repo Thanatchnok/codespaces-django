@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="{% static 'review.css' %}" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="{% static 'favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Group 32</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A200%2C400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope%3A200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mouse+Memoirs%3A400" />
+    <link rel="stylesheet" href="{% static 'styles/group-32.css' %}" />
+</head>
+<body>
+    <div class="desktop-myblog">
+        <div class="div">
+            <div class="overlap">
+                <header class="header">
+                    <img class="shape-with-text" src="{% static 'img/shape-with-text-1.svg' %}" />
+                    <img class="movie" src="{% static 'img/movie.svg' %}" />
+                    <img class="menu" src="{% static 'img/menu.svg' %}" />
+                    <img class="tv-show" src="{% static 'img/tv-show.svg' %}" />
+                  
+                </header>
+                <div class="profile"><img class="ellipse" src="{% static 'img/ellipse-4-1.png' %}" /></div>
+                <div class="search"></div>
+                <div class="search-2">
+                  <input class="search-name-list-of" placeholder="Search Name list of movie" type="text" />
+                  <img class="search-item" src="{% static 'img/search-item.svg' %}" />
+                </div>
+                <div class="text-wrapper">Innovitech</div>
+                <img class="logo" src="{% static 'img/logo.png' %}" />
+                <img class="mingcute-menu-fill" src="{% static 'img/mingcute-menu-fill.svg' %}" />
+                <img class="group" src="{% static 'img/group.png' %}" />
+                <img class="icon-park-movie" src="{% static 'img/icon-park-movie.svg' %}" />
+              </div>
+            <img class="text-box" src="{% static 'img/text-box-2.png' %}" />
+            <img class="img" src="{% static 'img/text-box-2.png' %}" />
+        </div>
+    </div>
+
+    <div class="desktop-review" id="page">
+        <div class="frameofbody" id="borderframe">
+            <div class="Showarea" id="frameofshowmovie">
+                <img class="Picmovie" src="{% static 'img/fivenight.jpg' %}" id="fivenightspic" />
+                <div class="rightframetop" id="frameofrighttop">
+                    <div class="textrighttopframe" id="frametexttop">
+                        <p class="text1" id="text1">Five Nights At Freddy’s</p>
+                        <p class="text2" id="text2">2023 Horror, Adventure 3hr 45min </p>
+                    </div>
+                    <div class="rightframebelow" id="frametoptex">
+                        <img class="picchosenone" src="{% static 'img/picchosenone.png' %}" id="chosenone" />
+                        <img class="picpopcorn" src="{% static 'img/popcorn.png' %}" id="popcorn" />
+                        <div class="textrightbelowframe2" id="framebelowtext">
+                            <div class="sub1textrightbelowframe" id="subframetext">
+                                <p class="text3" id="text3">80%</p>
+                                <p class="text4" id="text4">REVIEW SCORE </p>
+                            </div>
+                            <p class="text5" id="text5">Mostly Positive (440,000 Reviews)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add_comment">
+                <div class="rowuser">
+                    <img class="userimg" src="{% static 'img/ellipse-4-1.png' %}" width="50" height="50">
+                    <h2>Comment Section</h2>
+                </div>
+                <div>
+                    <input id="field1" placeholder="Add comment..............." type="text">
+                    <button id="addButton" onclick="addComment()" type="button">Sent</button>
+                </div>
+            </div>
+
+            <div id="commentContainer">
+                <!-- Comments will be added here -->
+            </div>
+
+            <div class="comment">
+                <div class="profıle-ımage">
+                    <p id="name">M</p>
+                </div>
+                <div class="username">Mony</div>
+                <div class="user-comment">
+                    <p>If you're a fan of the games, you'll likely enjoy this movie. It's a faithful adaptation that
+                        successfully brings the tension and horror of Five Nights at Freddy's to the big screen.
+                    </p>
+                    <div style="clear:both;"></div>
+                    <span>1 days ago</span>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="profıle-ımage">
+                    <p id="name">T</p>
+                </div>
+                <div class="username">The61</div>
+                <div class="user-comment">
+                    <p>One of the film's strongest points is its commitment to the source material. </p>
+                    <div style="clear:both;"></div>
+                    <span>1 days ago</span>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="profıle-ımage">
+                    <p id="name">P</p>
+                </div>
+                <div class="username">Peraya</div>
+                <div class="user-comment">
+                    <p>Good </p>
+                    <div style="clear:both;"></div>
+                    <span>1 days ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addComment() {
+            const commentText = document.getElementById("field1").value;
+
+            if (!commentText) {
+                alert("Please enter a comment before submitting.");
+                return;
+            }
+
+            // Add new comment
+            const newComment = document.createElement("div");
+            newComment.classList.add("comment");
+
+            newComment.innerHTML = `
+                <div class="profıle-ımage">
+                    <p id="name">M</p>
+                </div>
+                <div class="username">Me</div>
+                <div class="user-comment">
+                    <p>${commentText}</p>
+                    <button class="edit-comment-button" onclick="editComment(this)">Edit</button>
+                    <button class="save-comment-button" onclick="saveComment(this)">Save</button>
+                    <div style="clear:both;"></div>
+                    <span>Just now</span>
+                </div>
+            `;
+
+            const commentContainer = document.getElementById("commentContainer");
+            commentContainer.appendChild(newComment);
+
+            document.getElementById("field1").value = "";
+        }
+
+        function editComment(button) {
+            const commentText = button.previousElementSibling;
+            const editButton = button;
+            const saveButton = button.nextElementSibling;
+
+            // Replace the comment text with a textarea for editing
+            const textarea = document.createElement("textarea");
+            textarea.value = commentText.textContent;
+            commentText.replaceWith(textarea);
+
+            // Show the "Save" button and hide the "Edit" button
+            saveButton.style.display = "inline";
+            editButton.style.display = "none";
+        }
+
+        function saveComment(button) {
+            const commentText = button.previousElementSibling.previousElementSibling;
+            const editButton = button.previousElementSibling;
+            const saveButton = button;
+
+            // Replace the textarea with a paragraph containing the edited text
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = commentText.value;
+            commentText.replaceWith(newParagraph);
+
+            // Show the "Edit" button and hide the "Save" button
+            saveButton.style.display = "none";
+            editButton.style.display = "inline";
+        }
+    </script>
+</body>
+</html> 

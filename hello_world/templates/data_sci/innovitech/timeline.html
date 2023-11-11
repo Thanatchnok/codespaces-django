@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="{% static 'timeline.css' %}">
+    <title>Movie Review Design</title>
+</head>
+<body>
+
+    <div class="container">
+
+        
+        <div class="box main-box">
+            <div class="box third-box">
+                <div><img class="profile-img" src="{% static 'img/profileimage01.jpg' %}" alt="User Profile"></div>
+                <div class="profile-section">
+                    <h2>@userZeedZad</h2>
+                    <p>This movie is very Scary. I was shocked because the monster looks horrible.</p>
+                    <div class="review-box">
+                        <span class="scary-icon"><h8>🎃 Scary Review 🎃 Message detection from user </h8></span>
+                    </div>
+                </div>
+                <div class="review-section">
+                    <div class="rating">
+                        ★ ★ ★ ★ ☆
+                    </div>
+                    <button>View</button>
+                </div>
+                <div class="movie-section">
+                    <img class="movie-img" src="{% static 'img/movieimage01.jpg' %}" alt="Movie Poster">
+                    <h10>Five Nights At Freddy's</h10>
+                </div>
+            </div>
+            <br>
+            <div class="box third-box">
+                <div><img class="profile-img" src="{% static 'img/profileimage05.jpg' %}" alt="User Profile"></div>
+                <div class="profile-section">
+                    <h2>@user12345</h2>
+                    <p>“Everybody, try laughing. Then whatever scares you will go away! ” - Tatsuo KusakabeTwo young sisters move into a new house with their father so they can be closer to their mother who is in hospital. The children soon discover a large rabbit like spirit named, Totoro, living in the forest around their new house and set to work befriending him.</p>
+                    <div class="review-box2">
+                        <span class="positive-icon"><h8>👍 ✓Positive Review✓ 👍 Message detection from user </h8></span>
+                    </div>
+                </div>
+                <div class="review-section">
+                    <div class="rating">
+                        ★ ★ ★ ★ ☆
+                    </div>
+                    <button>View</button>
+                </div>
+                <div class="movie-section">
+                    <img class="movie-img" src="{% static 'img/movieimage04.jpg' %}" alt="Movie Poster">
+                    <h10>Totoro</h10>
+                </div>
+            </div>
+            <br>
+            <div class="box third-box">
+                <div><img class="profile-img" src="{% static 'img/profileimage04.jpg' %}" alt="User Profile"></div>
+                <div class="profile-section">
+                    <h2>@user6789</h2>
+                    <p>This is romantic. I really feel warm and romantic.very good i want to watch it again</p>
+                    <div class="review-box3">
+                        <span class="romantic-icon"><h8>❤️ feel warm and romantic ❤️ Message detection from user </h8></span>
+                    </div>
+                </div>
+                <div class="review-section">
+                    <div class="rating">
+                        ★ ★ ★ ★ ☆
+                    </div>
+                    <button>View</button>
+                </div>
+                <div class="movie-section">
+                    <img class="movie-img" src="{% static 'img/movieimage03.jpg' %}" alt="Movie Poster">
+                    <h10>Your Name</h10>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="box secondary-box">
+            <div class="follow-header">Who to follow</div>
+            <div class="follow-section">
+                <div class="follow-profile">
+                    <div><img class="follow-img" src="{% static 'img/profileimage01.jpg' %}" alt="User Profile"></div>
+                    <h2>JohnDoe1985</h2>
+                    <button>Follow</button>
+                    <div><img class="follow-img" src="{% static 'img/profileimage06.jpg' %}" alt="User Profile"></div>
+                    <h2>MountainHiker22</h2>
+                    <button>Follow</button>
+                    <div><img class="follow-img" src="{% static 'img/profileimage07.jpg' %}" alt="User Profile"></div>
+                    <h2>ArtisticSoul55</h2>
+                    <button>Follow</button>
+                    <div><img class="follow-img" src="{% static 'img/profileimage08.jpg' %}" alt="User Profile"></div>
+                    <h2>FallOut76</h2>
+                    <button>Follow</button>
+                    <div><img class="follow-img" src="{% static 'img/profileimage09.jpg' %}" alt="User Profile"></div>
+                    <h2>CyberPunk2077</h2>
+                    <button>Follow</button>
+                </div>
+                <br>
+                <div id="chart"></div>
+                
+                <div class="show-more">Show more</div>
+                <div class="community-section">
+                    <h1>Community</h1>
+                    <div class="image-grid">
+                        <div class="image-wrapper"><img src="{% static 'img/profileimage01.jpg' %}" alt="Community Image 1"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage01.jpg' %}" alt="Community Image 2"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage02.jpg' %}" alt="Community Image 3"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage03.jpg' %}" alt="Community Image 4"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage04.jpg' %}" alt="Community Image 5"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage05.jpg' %}" alt="Community Image 6"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage06.jpg' %}" alt="Community Image 7"></div>
+                        <div class="image-wrapper"><img src="{% static 'img/communityImage07.jpg' %}" alt="Community Image 8"></div>
+                    </div>
+                </div>
+                <button onclick="refreshPage()">Refresh Data</button>
+                
+            </div>
+        </div>
+        <script>
+                const movieData = [
+                { title: "Positive_review", score: 4, review: "Positive" },
+                { title: "Negative_review", score: 5, review: "Negative" },
+            
+                ];
+
+                const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+                const width = 600 - margin.left - margin.right;
+                const height = 400 - margin.top - margin.bottom;
+
+                const svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                const x = d3.scaleBand()
+                .range([0, width])
+                .padding(0.1)
+                .domain(movieData.map(d => d.title));
+
+                const y = d3.scaleLinear()
+                .range([height, 0])
+                .domain([0, d3.max(movieData, d => d.score)]);
+
+                svg.selectAll(".bar")
+                .data(movieData)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.title))
+                .attr("width", x.bandwidth())
+                .attr("y", d => y(d.score))
+                .attr("height", d => height - y(d.score));
+
+                svg.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+                svg.append("g")
+                .attr("class", "axis")
+                .call(d3.axisLeft(y));
+                function refreshPage() {
+                location.reload();
+            }   
+                    
+                            
+        </script>
+        
+    
+</div>
+
+</body>
+</html>
