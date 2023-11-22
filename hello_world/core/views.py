@@ -30,10 +30,11 @@ from data_sci.models import MovieDescription
 from data_sci.models import MovieReview
 from data_sci.models import MovieReviewRelated
 from data_sci.models import Comment
+from data_sci.models import Review
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 import pandas as pd
-from data_sci.models import MovieDescription, MovieReview, MovieReviewRelated
+
 from io import StringIO
 import csv
 
@@ -52,123 +53,158 @@ from sklearn.linear_model import LinearRegression  # Add this import
 
 
 
+from django.db.models import Count
+from django.http import JsonResponse
+# views.py
+
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+from django.http import JsonResponse
+import json
+from django.shortcuts import render
+from django.http import JsonResponse
+
+
+@csrf_exempt
 def add_comment(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         try:
-            user = request.user
-            comment_text = request.POST.get("comment_text")
+            data = json.loads(request.body)
+            comment_text = data.get('comment_text')
 
-            if not comment_text:
-                return JsonResponse({'error': 'Comment cannot be empty.'}, status=400)
+            if comment_text:
+                # Save the comment in your Comment model
+                new_comment = Comment.objects.create(text=comment_text)
+                return JsonResponse({
+                    'id': new_comment.id,
+                    'comment_text': new_comment.text,
+                    'timestamp': new_comment.timestamp.strftime("%Y-%m-%d %H:%M:%S")
+                })
+            else:
+                return JsonResponse({'error': 'No comment provided'}, status=400)
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON data'}, status=400)
+    else:
+        return JsonResponse({'error': 'Invalid request method'}, status=405)
 
-            comment = Comment(user=user, text=comment_text)
-            comment.save()
-
-            return JsonResponse({'success': 'Comment added successfully'}, status=201)
-
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=500)
-
-    return JsonResponse({'error': 'Method not allowed'}, status=405)
-
-
-def Visualize_D3(request):
-    # Fetch data from the MovieReview model
-    reviews = MovieReview.objects.all()
-
-    total_Positivereview = [review.imbd_rating for review in reviews]
-    total_Negativereview = [review.imbd_rating for review in reviews]
-
-    X = np.array(total_Positivereview).reshape(-1, 1)
-    y = np.array(total_Negativereview).reshape(-1, 1)
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
-
-    regr = LinearRegression()
-    regr.fit(X_train, y_train)
-
-    y_pred = regr.predict(X)
-
-    # Fetch titles in the same order as the data
-    titles = [review.review_title for review in reviews]
-
-    # Create a list of dictionaries for the output
-    json_output = []
-    for i in range(len(titles)):
-        json_output.append({
-            'title': titles[i],
-            'total_Positive': total_Positivereview[i],
-            'total_Negative': total_Negativereview[i],
-            'predict_applicants': float(y_pred[i][0])
-        })
-
-    # Return the data as a JSON response
-    return JsonResponse(json_output, safe=False)
+from django.views.decorators.csrf import csrf_exempt
 
 
+from django.db.models import Count
+def visualize_d3(request):
+    reviews = MovieReview.objects.filter(sentiment__in=['Positive', 'Negative'])
+    sentiment_counts = reviews.values('sentiment').annotate(count=Count('sentiment'))
+
+    # Prepare data for the bar graph
+    labels = [entry['sentiment'] for entry in sentiment_counts]
+    counts = [entry['count'] for entry in sentiment_counts]
+
+    if 'Positive' not in labels:
+        labels.append('Positive')
+        counts.append(0)
+    if 'Negative' not in labels:
+        labels.append('Negative')
+        counts.append(0)
+
+    json_output = {
+        'sentiment': labels,
+        'counts': counts,
+    }
+
+    return JsonResponse(json_output)
 
 def external_api_get_from_sheet(request):
-    # Fetching the CSV data from the Google Sheets link
+   
     sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWaIu5uI0oQ6tCXZBsdT6lqgXvbjbzg3ZXJnK2krqVmNC33fn62Fd0mPA3EXMzv5E9eweW6ZDWvQO4/pub?output=csv"
     sheet_response = requests.get(sheet_url)
-    sheet_response.raise_for_status()  # Will raise an exception if the request is not successful
+    sheet_response.raise_for_status()  
 
     # Parsing the CSV data
     csvfile = StringIO(sheet_response.text)
     reader = csv.reader(csvfile)
-    header = next(reader)  # Assuming the first row is the header
+    header = next(reader)  
 
-    # Let's say we want the text from the second row (index 1) and the column named 'review'
+   
     review_index = header.index('review')
-    next(reader)  # Skip the second row
-    row = next(reader)  # Get the third row
+    next(reader)
+    row = next(reader)  
     review_text = row[review_index]
 
-    # Now we have the review text, we can make the API call
+    
     url = "https://api.meaningcloud.com/sentiment-2.1"
     params = {
-        'key': "aeefdec613582d7f59ae105975ed2103",
+        'key': "c07e09e9aef8ace95ebd7370dfc90cce",
         'txt': review_text
     }
     response = requests.get(url, params=params)
 
-    # Check the response status code
+   
     if response.status_code == 200:
         try:
             result = response.json()
+
+           
+            sentiment_data = result.get('sentence_list', [])
+
+            
+            agreement_data = []
+            score_tags = []
+
+            for sentence in sentiment_data:
+                agreement_info = sentence.get('agreement', '')
+                score_tag = sentence.get('score_tag', '')
+                
+                if agreement_info:
+                    agreement_data.append({'agreement': agreement_info})
+                
+                if score_tag:
+                    score_tags.append(score_tag)
+
+            num_positive = sum(tag == 'P' or tag == 'P+' for tag in score_tags)
+            num_negative = sum(tag == 'N' or tag == 'N+' for tag in score_tags)
+            num_neutral = sum(tag == 'NEU' or tag == 'NONE' for tag in score_tags)
+
+            if num_neutral > num_positive:
+                overall_sentiment = 'Neutral'
+            elif num_negative > 2:
+                overall_sentiment = 'Negative'
+            else:
+                overall_sentiment = 'Positive'
+
+
+           
+            soup = BeautifulSoup(review_text, 'html.parser')
+            cleaned_review_text = soup.get_text()
+
+           
+            response_data = {
+                'review_text': cleaned_review_text,
+                'agreement_data': agreement_data,
+                'score_tags': score_tags,
+                'overall_sentiment': overall_sentiment,
+            }
+
+           
+            if overall_sentiment not in ['Positive', 'Negative']:
+                response_data['error'] = 'No Positive or Negative sentiment found'
+
+            
+            movie_review_instance = MovieReview.objects.create(
+                review_text=cleaned_review_text,
+                sentiment=overall_sentiment,
+            )
+
+            return JsonResponse(response_data)
+
         except ValueError:
-            # Handle the exception if the response is not in JSON format
+           
             result = {'error': 'Invalid JSON response', 'content': response.text}
     else:
         result = {'error': 'API request failed', 'status_code': response.status_code}
 
     return JsonResponse(result)
-
-
-
-def analyze_sentiment(request):
-    if request.method == 'GET':
-        # Handle GET request here
-        text = request.GET.get('text')  # Get the text from the query parameters
-        
-        if text:
-            result = perform_sentiment_analysis(text)
-            return JsonResponse(result)
-        else:
-            return JsonResponse({'error': 'Text parameter is missing in the GET request.'})
-
-    elif request.method == 'POST':
-        text = request.POST.get('text')  # Get the text from the POST request
-        
-        if text:
-            result = perform_sentiment_analysis(text)
-            return JsonResponse(result)
-        else:
-            return JsonResponse({'error': 'Text parameter is missing in the POST request.'})
-
-    else:
-        return JsonResponse({'error': 'This endpoint only supports GET and POST requests.'})
-    
 
     
 def load_imdb_data(request):
@@ -219,6 +255,34 @@ def review(request):
     context={}
     return render(request,"data_sci/innovitech/review.html",context=context)
 
+
+#This is csv of review and sentiment of imbd
+def import_datareview_csv(request):
+    csv_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWaIu5uI0oQ6tCXZBsdT6lqgXvbjbzg3ZXJnK2krqVmNC33fn62Fd0mPA3EXMzv5E9eweW6ZDWvQO4/pub?output=csv"
+    df = pd.read_csv(csv_url)
+    
+    print("Columns in DataFrame:", df.columns)
+
+    data_sets = df[["review", "sentiment"]]
+    success = []
+    errors = []
+
+    for index, row in data_sets.iterrows():
+        instance = Review(
+            review=row['review'],
+            sentiment=row['sentiment'],
+        )
+
+        try:
+            instance.save()
+            success.append(index)
+        except Exception as e:
+            errors.append({"index": index, "error": str(e)})
+
+    return JsonResponse({"success_indices": success, "error_indices": errors})
+
+
+#not use
 def import_data_csv(request):
     csv_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTP9SJX5VtWy6eQy7QZRrA2cuyqucI2-f-sZht2vQzRkbOBvmJlCQYZyg1F99U7Xcsk8EpOwgGZmFNG/pub?output=csv"
     df = pd.read_csv(csv_url)

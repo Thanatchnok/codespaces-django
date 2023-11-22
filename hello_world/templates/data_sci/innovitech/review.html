@@ -1,42 +1,113 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title></title>
     <link rel="stylesheet" href="{% static 'review.css' %}" />
     <meta charset="utf-8" />
     <link rel="icon" href="{% static 'favicon.ico' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <title>Group 32</title>
+    <title>Innovitech</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A200%2C400" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope%3A200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mouse+Memoirs%3A400" />
-    <link rel="stylesheet" href="{% static 'styles/group-32.css' %}" />
 </head>
+<style>
+    body {
+    overflow-x: hidden; 
+    }
+    
+    .menu button {
+        width: 155px;
+        height: 41px;
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+        background-color: white; 
+        cursor: pointer;
+    }
+
+    .menu button:hover {
+        background-color: #f0f0f0; 
+    }
+
+    .movie button {
+        width: 155px;
+        height: 41px;
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+        background-color: white; 
+        cursor: pointer;
+    }
+
+    .movie button:hover {
+        background-color: #f0f0f0; 
+    }
+
+    .tv-show button {
+        width: 155px;
+        height: 41px;
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+        background-color: white; 
+        cursor: pointer;
+    }
+
+    .tv-show button:hover {
+        background-color: #f0f0f0; 
+    }
+    .overlap {
+        text-align: center;
+        margin-left: 100px;
+
+    }
+</style>
+
 <body>
+    
     <div class="desktop-myblog">
+
         <div class="div">
             <div class="overlap">
                 <header class="header">
-                    <img class="shape-with-text" src="{% static 'img/shape-with-text-1.svg' %}" />
-                    <img class="movie" src="{% static 'img/movie.svg' %}" />
-                    <img class="menu" src="{% static 'img/menu.svg' %}" />
-                    <img class="tv-show" src="{% static 'img/tv-show.svg' %}" />
-                  
+
+                    <div class="movie" style="width: 155px; height: 41px;">
+                        <a href="{% url 'blog' %}">
+                          <button
+                            style="width: 100%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">MyBlog</button>
+                        </a>
+                      </div>
+          
+                      <div class="menu" style="width: 155px; height: 41px;">
+                        <a href="{% url 'timeline' %}">
+                          <button
+                            style="width: 100%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">Timeline</button>
+                        </a>
+                      </div>
+          
+                      <div class="tv-show" style="width: 100px; height: 41px;">
+                        <a href="{% url 'homepage' %}">
+                          <button
+                            style="width: 100%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">Home</button>
+                        </a>
+                      </div>
+          
+
                 </header>
                 <div class="profile"><img class="ellipse" src="{% static 'img/ellipse-4-1.png' %}" /></div>
                 <div class="search"></div>
                 <div class="search-2">
-                  <input class="search-name-list-of" placeholder="Search Name list of movie" type="text" />
-                  <img class="search-item" src="{% static 'img/search-item.svg' %}" />
+                    <input class="search-name-list-of" style="font-family: Arial, Helvetica, sans-serif; margin-top: -10px;" placeholder="Search Name list of movie" type="text" />
+                    <img class="search-item" src="{% static 'img/search-item.svg' %}" />
                 </div>
-                <div class="text-wrapper">Innovitech</div>
+                <div class="text-wrapper" style="font-family: Arial, Helvetica, sans-serif; margin-left: 100px;">Innovitech</div>
                 <img class="logo" src="{% static 'img/logo.png' %}" />
-                <img class="mingcute-menu-fill" src="{% static 'img/mingcute-menu-fill.svg' %}" />
-                <img class="group" src="{% static 'img/group.png' %}" />
-                <img class="icon-park-movie" src="{% static 'img/icon-park-movie.svg' %}" />
-              </div>
+                
+
+            </div>
             <img class="text-box" src="{% static 'img/text-box-2.png' %}" />
             <img class="img" src="{% static 'img/text-box-2.png' %}" />
         </div>
@@ -47,19 +118,15 @@
             <div class="Showarea" id="frameofshowmovie">
                 <img class="Picmovie" src="{% static 'img/fivenight.jpg' %}" id="fivenightspic" />
                 <div class="rightframetop" id="frameofrighttop">
-                    <div class="textrighttopframe" id="frametexttop">
-                        <p class="text1" id="text1">Five Nights At Freddy’s</p>
-                        <p class="text2" id="text2">2023 Horror, Adventure 3hr 45min </p>
+                    <div class="textrighttopframe" style="margin-right: 20px;" id="frametexttop">
+                        <p class="text1" style="font-size: 48px;" id="text1">Five Nights At Freddy’s</p>
                     </div>
-                    <div class="rightframebelow" id="frametoptex">
+                    <div class="rightframebelow" style="margin-left: 10px;" id="frametoptex">
                         <img class="picchosenone" src="{% static 'img/picchosenone.png' %}" id="chosenone" />
                         <img class="picpopcorn" src="{% static 'img/popcorn.png' %}" id="popcorn" />
                         <div class="textrightbelowframe2" id="framebelowtext">
-                            <div class="sub1textrightbelowframe" id="subframetext">
-                                <p class="text3" id="text3">80%</p>
-                                <p class="text4" id="text4">REVIEW SCORE </p>
-                            </div>
-                            <p class="text5" id="text5">Mostly Positive (440,000 Reviews)</p>
+
+
                         </div>
                     </div>
                 </div>
@@ -76,8 +143,25 @@
                 </div>
             </div>
 
+            
             <div id="commentContainer">
-                <!-- Comments will be added here -->
+                {% if comments %}
+                {% for comment in comments %}
+                <div class="comment">
+                    <div class="profıle-ımage">
+                        <p id="name">M</p>
+                    </div>
+                    <div class="username">Me</div>
+                    <div class="user-comment">
+                        <p>{{ comment.fields.text }}</p>
+                        <button class="edit-comment-button" onclick="editComment(this)">Edit</button>
+                        <button class="save-comment-button" onclick="saveComment(this)">Save</button>
+                        <div style="clear:both;"></div>
+                        <span>Just now</span>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
             </div>
 
             <div class="comment">
@@ -121,6 +205,10 @@
     </div>
 
     <script>
+        function getCookie(name) {
+            const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+            return cookieValue ? cookieValue.pop() : '';
+        }
         function addComment() {
             const commentText = document.getElementById("field1").value;
 
@@ -128,6 +216,30 @@
                 alert("Please enter a comment before submitting.");
                 return;
             }
+
+            fetch('/example/comment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ comment_text: commentText })
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json(); 8
+                    }
+                    throw new Error('Failed to add comment');
+                })
+                .then(data => {
+                    
+                    console.log('New comment added:', data);
+                   
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                   
+                });
 
             // Add new comment
             const newComment = document.createElement("div");
@@ -152,6 +264,8 @@
 
             document.getElementById("field1").value = "";
         }
+
+
 
         function editComment(button) {
             const commentText = button.previousElementSibling;
@@ -184,4 +298,5 @@
         }
     </script>
 </body>
-</html> 
+
+</html>

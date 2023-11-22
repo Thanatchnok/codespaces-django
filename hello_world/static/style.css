@@ -605,38 +605,4 @@
   position: absolute;
   width: 33px;
   height: 33px;
-  top: 45px;
-  left: 965px;
-}
-
-.mockups-desktop .search-2 {
-  position: absolute;
-  width: 295px;
-  height: 41px;
-  top: 107px;
-  left: 262px;
-}
-
-.mockups-desktop .search-item {
-  position: absolute;
-  width: 41px;
-  height: 41px;
-  top: 0;
-  left: 0;
-}
-
-.mockups-desktop .search-name-list-of {
-  position: absolute;
-  width: 245px;
-  top: 6px;
-  left: 48px;
-  font-family: "Manrope", Helvetica;
-  font-weight: 200;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  background: transparent;
-  border: none;
-  padding: 0;
 }

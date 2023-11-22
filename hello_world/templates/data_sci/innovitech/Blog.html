@@ -2,166 +2,206 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="{% static 'globals.css' %}" />
-    <link rel="stylesheet" href="{% static 'Blog.css' %}" />
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-  </head>
-  <body>
-    <div class="desktop-myblog">
-      <div class="div">
-        <div class="overlap">
+
+<head>
+  <link rel="stylesheet" href="{% static 'globals.css' %}" />
+  <link rel="stylesheet" href="{% static 'Blog.css' %}" />
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+  <div class="desktop-myblog">
+    <div class="div">
+      <div class="overlap">
+        <div class="overlap-11">
           <header class="header">
-            
-              <img class="shape-with-text" src="{% static 'img/shape-with-text-1.svg' %}" />
-              <img class="movie" src="{% static 'img/movie.svg' %}" />
-              <img class="menu" src="{% static 'img/menu.svg' %}" />
-              <img class="tv-show" src="{% static 'img/tv-show.svg' %}" />
-            
-          </header>
-          <div class="profile"><img class="ellipse" src="{% static 'img/ellipse-4-1.png' %}" /></div>
-          <div class="search"></div>
-          <div class="search-2">
-            <input class="search-name-list-of" placeholder="Search Name list of movie" type="text" />
-            <img class="search-item" src="{% static 'img/search-item.svg' %}" />
-          </div>
-          <div class="text-wrapper">Innovitech</div>
-          <img class="logo" src="{% static 'img/logo.png' %}" />
-          <img class="mingcute-menu-fill" src="{% static 'img/mingcute-menu-fill.svg' %}" />
-          <img class="group" src="{% static 'img/group.png' %}" />
-          <img class="icon-park-movie" src="{% static 'img/icon-park-movie.svg' %}" />
+            <div class="movie" style="width: 155px; height: 41px;">
+              <a href="{% url 'blog' %}">
+                <button
+                  style="width: 100%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">MyBlog</button>
+              </a>
+            </div>
+
+            <div class="menu" style="width: 155px; height: 41px;">
+              <a href="{% url 'timeline' %}">
+                <button
+                  style="width: 100%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">Timeline</button>
+              </a>
+            </div>
+
+            <div class="tv-show" style="width: 100px; height: 41px;">
+              <a href="{% url 'homepage' %}">
+                <button
+                  style="width: 100%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">Home</button>
+              </a>
+            </div>
+
+            <div class="profile"><img class="ellipse" src="/static/img/ellipse-4-1.png" /></div>
+            <div class="search"></div>
+            <div class="text-wrapper" style="text-align: right; margin-left: 5rem;">Innovitech</div>
+            <img class="logo" src="{% static 'img/logo.png' %}" style="float: left;" />
+
+
+            <div class="search-2">
+
+              <input class="search-name-list-of" placeholder="Search Name list of movie" type="text" />
+            </div>
         </div>
-        <img class="text-box" src="{% static 'img/text-box-2.png' %}" />
-        <img class="img" src="{% static 'img/text-box-2.png' %}" />
-        <div class="overlap-2">
-          <div class="rectangle"></div>
-          <div class="text-wrapper-2">Myblog</div>
-          <img class="rectangle-2" src="{% static 'img/rectangle-4119.png' %}" />
-          <div class="anna">
-            <div class="overlap-3">
-              <div class="rectangle-3"></div>
-              <img class="rectangle-4" src="{% static 'img/rectangle-12-3.png' %}" />
-              <div class="text-wrapper-3">Annabelle</div>
-              <p class="element-country">
-                8/10 (24K)<br />Country: American<br />Content Rating: 17+<br />Directors: John R. Leonetti<br />Cast:
-                Annabelle Wallis
-              </p>
-              
-              <div class="group-2"><div class="rectangle-12"></div></div>
-              <div class="group-3">
-                <div class="overlap-group-2"><div class="rectangle-13"></div></div>
-                <div class="rectangle-14"></div>
-              </div>
-              <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
-              <div class="text-wrapper-8">Read</div>
-              <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
-              <button onclick="addMovieToFavorites('Annabelle')"><img class="image-7" src="{% static 'img/image-8-2.png' %}" /></button>
+      </div>
+
+
+      <img class="text-box" src="{% static 'img/text-box-2.png' %}" />
+      <img class="img" src="{% static 'img/text-box-2.png' %}" />
+      <div class="overlap-2">
+        <div class="rectangle"></div>
+        <div class="text-wrapper-2">Myblog</div>
+        <img class="rectangle-2" src="{% static 'img/rectangle-4119.png' %}" />
+        <div class="anna">
+          <div class="overlap-3">
+            <div class="rectangle-3"></div>
+            <img class="rectangle-4" src="{% static 'img/rectangle-12-3.png' %}" />
+            <div class="text-wrapper-3">Annabelle</div>
+            <p class="element-country">
+              8/10 (24K)<br />Country: American<br />Content Rating: 17+<br />Directors: John R. Leonetti<br />Cast:
+              Annabelle Wallis
+            </p>
+
+            <div class="group-2">
+              <div class="rectangle-12"></div>
             </div>
+            <div class="group-3">
+              <div class="overlap-group-2">
+                <div class="rectangle-13"></div>
+              </div>
+              <div class="rectangle-14"></div>
+            </div>
+            <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
+            <div class="text-wrapper-8">Read</div>
+            <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
+            <button onclick="addMovieToFavorites('Annabelle')"><img class="image-7"
+                src="{% static 'img/image-8-2.png' %}" /></button>
           </div>
-          <div class="text-wrapper-4">#Comedy</div>
-          <img class="rectangle-7" src="{% static 'img/rectangle-4120.png' %}" />
-          <div class="text-wrapper-5">#Romantic</div>
-          <img class="rectangle-8" src="{% static 'img/rectangle-4121.png' %}" />
-          <div class="text-wrapper-6">#Drama</div>
-          <img class="rectangle-9" src="{% static 'img/rectangle-4154.png' %}" />
-          <div class="ellipse-wrapper"><img class="ellipse-2" src="{% static 'img/ellipse-4.png' %}" /></div>
+        </div>
+        <div class="text-wrapper-4">#Comedy</div>
+        <img class="rectangle-7" src="{% static 'img/rectangle-4120.png' %}" />
+        <div class="text-wrapper-5">#Romantic</div>
+        <img class="rectangle-8" src="{% static 'img/rectangle-4121.png' %}" />
+        <div class="text-wrapper-6">#Drama</div>
+        <img class="rectangle-9" src="{% static 'img/rectangle-4154.png' %}" />
         
-         
-          <div class="list">
-            <div class="overlap-4">
-              <div class="rectangle-10"></div>
-              <img class="rectangle-11" src="{% static 'img/rectangle-12-2.png' %}" />
-              <img class="image-4" src="{% static 'img/image-2-1.png' %}" />
-              <p class="text-wrapper-7">I told sunset about you</p>
-              <p class="element-k-country">
-                8.2/10 (24K)<br />Country: Thailand<br />Content Rating: 15+<br />Director: Boss Naruebet Kuno<br />Cast:
-                Billkin,PP Krit
-              </p>
-              <div class="group-2"><div class="rectangle-12"></div></div>
-              <div class="group-3">
-                <div class="overlap-group-2"><div class="rectangle-13"></div></div>
-                <div class="rectangle-14"></div>
-              </div>
-              <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
-              <div class="text-wrapper-8">Read</div>
-              <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
-              <button onclick="addMovieToFavorites('I Told Sunset About You')"><img class="image-7" src="{% static 'img/image-8-2.png' %}" /></button>
+
+
+        <div class="list">
+          <div class="overlap-4">
+            <div class="rectangle-10"></div>
+            <img class="rectangle-11" src="{% static 'img/rectangle-12-2.png' %}" />
+            <img class="image-4" src="{% static 'img/image-2-1.png' %}" />
+            <p class="text-wrapper-7">I told sunset about you</p>
+            <p class="element-k-country">
+              8.2/10 (24K)<br />Country: Thailand<br />Content Rating: 15+<br />Director: Boss Naruebet Kuno<br />Cast:
+              Billkin,PP Krit
+            </p>
+            <div class="group-2">
+              <div class="rectangle-12"></div>
             </div>
+            <div class="group-3">
+              <div class="overlap-group-2">
+                <div class="rectangle-13"></div>
+              </div>
+              <div class="rectangle-14"></div>
+            </div>
+            <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
+            <div class="text-wrapper-8">Read</div>
+            <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
+            <button onclick="addMovieToFavorites('I Told Sunset About You')"><img class="image-7"
+                src="{% static 'img/image-8-2.png' %}" /></button>
           </div>
-          <div class="overlap-wrapper">
-            <div class="overlap-4">
-              <div class="rectangle-10"></div>
-              <img class="rectangle-11" src="{% static 'img/rectangle-12-1.png' %}" />
-              <img class="image-4" src="{% static 'img/image-2-1.png' %}" />
-              <div class="text-wrapper-7">Five Nights At Freddy’s</div>
-              <p class="element-k-country">
-                6.7/10 (24K)<br />Country: Thailand<br />Content Rating: 15+<br />Director: Boss Naruebet Kuno<br />Cast:
-                Sky,Mai,Sunny
-              </p>
-              <div class="group-2"><div class="rectangle-12"></div></div>
-              <div class="group-3">
-                <div class="overlap-group-2"><div class="rectangle-13"></div></div>
-                <div class="rectangle-14"></div>
-              </div>
-              <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
-              <div class="text-wrapper-8">Read</div>
-              <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
-              <button onclick="addMovieToFavorites('Five Nights At Freddy’s')"><img class="image-7" src="{% static 'img/image-8-2.png' %}" /></button>
+        </div>
+        <div class="overlap-wrapper">
+          <div class="overlap-4">
+            <div class="rectangle-10"></div>
+            <img class="rectangle-11" src="{% static 'img/rectangle-12-1.png' %}" />
+            <img class="image-4" src="{% static 'img/image-2-1.png' %}" />
+            <div class="text-wrapper-7">Five Nights At Freddy’s</div>
+            <p class="element-k-country">
+              6.7/10 (24K)<br />Country: Thailand<br />Content Rating: 15+<br />Director: Boss Naruebet Kuno<br />Cast:
+              Sky,Mai,Sunny
+            </p>
+            <div class="group-2">
+              <div class="rectangle-12"></div>
             </div>
+            <div class="group-3">
+              <div class="overlap-group-2">
+                <div class="rectangle-13"></div>
+              </div>
+              <div class="rectangle-14"></div>
+            </div>
+            <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
+            <div class="text-wrapper-8">Read</div>
+            <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
+            <button onclick="addMovieToFavorites('Five Nights At Freddy’s')"><img class="image-7"
+                src="{% static 'img/image-8-2.png' %}" /></button>
           </div>
-          <img class="ic-baseline-navigate" src="{% static 'img/ic-baseline-navigate-next-1.svg' %}" />
-          <img class="ic-baseline-navigate-2" src="{% static 'img/ic-baseline-navigate-next.svg' %}" />
-          <div class="overlap-group-wrapper">
-            <div class="overlap-5">
-              <div class="rectangle-15"></div>
-              <img class="rectangle-16" src="{% static 'img/rectangle-12.png' %}" />
-              <img class="image-8" src="{% static 'img/image-2.png' %}" />
-              <div class="text-wrapper-9">The Undertaker</div>
-              <p class="p">
-                9/10 (24K)<br />Country: Thailand<br />Content Rating: 18+<br />Directors: Thiti Srinuan<br />Cast:
-                Chatchai Chinsri
-              </p>
-              <div class="group-4"><div class="rectangle-17"></div></div>
-              <div class="group-5">
-                <div class="overlap-group-3"><div class="rectangle-18"></div></div>
-                <div class="rectangle-19"></div>
-              </div>
-              <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
-              <div class="text-wrapper-10">Read</div>
-              <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
-              <button onclick="addMovieToFavorites('The Undertaker')"><img class="image-7" src="{% static 'img/image-8-2.png' %}" /></button>
+        </div>
+        <img class="ic-baseline-navigate" src="{% static 'img/ic-baseline-navigate-next-1.svg' %}" />
+        <img class="ic-baseline-navigate-2" src="{% static 'img/ic-baseline-navigate-next.svg' %}" />
+        <div class="overlap-group-wrapper">
+          <div class="overlap-5">
+            <div class="rectangle-15"></div>
+            <img class="rectangle-16" src="{% static 'img/rectangle-12.png' %}" />
+            <img class="image-8" src="{% static 'img/image-2.png' %}" />
+            <div class="text-wrapper-9">The Undertaker</div>
+            <p class="p">
+              9/10 (24K)<br />Country: Thailand<br />Content Rating: 18+<br />Directors: Thiti Srinuan<br />Cast:
+              Chatchai Chinsri
+            </p>
+            <div class="group-4">
+              <div class="rectangle-17"></div>
             </div>
+            <div class="group-5">
+              <div class="overlap-group-3">
+                <div class="rectangle-18"></div>
+              </div>
+              <div class="rectangle-19"></div>
+            </div>
+            <img class="image-5" src="{% static 'img/image-21-1.png' %}" />
+            <div class="text-wrapper-10">Read</div>
+            <img class="image-6" src="{% static 'img/image-20-1.png' %}" />
+            <button onclick="addMovieToFavorites('The Undertaker')"><img class="image-7"
+                src="{% static 'img/image-8-2.png' %}" /></button>
           </div>
         </div>
       </div>
-      <footer>
-        <h2>Liked Movies:</h2>
-        <ul id="likedMoviesList"></ul>
-      </footer>
     </div>
-    <script>
-      function addMovieToFavorites(movieName) {
-        const list = document.getElementById('likedMoviesList');
-        if (Array.from(list.children).some(li => li.textContent.includes(movieName))) {
-          alert(movieName + " is already in your favorites!");
-          return;
-        }
-        const listItem = document.createElement('li');
-        listItem.textContent = movieName + " ";
-        
-        const deleteBtn = document.createElement('span');
-        deleteBtn.textContent = "X";
-        deleteBtn.classList.add('delete-btn');
-        deleteBtn.onclick = function() { deleteMovie(this); };
-        
-        listItem.appendChild(deleteBtn);
-        list.appendChild(listItem);
+    <footer>
+      <h2>Liked Movies:</h2>
+      <ul id="likedMoviesList"></ul>
+    </footer>
+  </div>
+  <script>
+    function addMovieToFavorites(movieName) {
+      const list = document.getElementById('likedMoviesList');
+      if (Array.from(list.children).some(li => li.textContent.includes(movieName))) {
+        alert(movieName + " is already in your favorites!");
+        return;
       }
-    
-      function deleteMovie(btn) {
-        const li = btn.parentNode;
-        li.parentNode.removeChild(li);
-      }
-    </script>
-  </body>
+      const listItem = document.createElement('li');
+      listItem.textContent = movieName + " ";
+
+      const deleteBtn = document.createElement('span');
+      deleteBtn.textContent = "X";
+      deleteBtn.classList.add('delete-btn');
+      deleteBtn.onclick = function () { deleteMovie(this); };
+
+      listItem.appendChild(deleteBtn);
+      list.appendChild(listItem);
+    }
+
+    function deleteMovie(btn) {
+      const li = btn.parentNode;
+      li.parentNode.removeChild(li);
+    }
+  </script>
+</body>
+
 </html>

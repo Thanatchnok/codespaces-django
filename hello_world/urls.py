@@ -23,20 +23,21 @@ from data_sci.models import *
 
 
 urlpatterns = [
-    path("", core_views.index),
+    path("", core_views.homepage, name='homepage'),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
-    path("example/homepage", core_views.homepage),
-    path("example/blog", core_views.blog),
-    path("example/timeline", core_views.timeline),
-    path("example/review", core_views.review),
+    path("example/blog", core_views.blog, name='blog'),
+    path("example/timeline", core_views.timeline, name='timeline'),
+    path("example/review", core_views.review, name='review'),
+    path("example/importreview", core_views.import_datareview_csv),
     path("example/import", core_views.import_data_csv),
     path("example/tdata", core_views.load_imdb_data),
     path("example/sdata", core_views.imdb_data_summary),
     path("example/cdata", core_views.imdb_sentiment_count),
     path("example/getAPI", core_views.external_api_get_from_sheet),
-    path("example/postAPI", core_views.analyze_sentiment),
-    path("example/visualize", core_views.Visualize_D3),
+    path("example/visualize_d3", core_views.visualize_d3),
+    path("example/comment",core_views.add_comment),
+    path('example/visualize_d3/', core_views.visualize_d3, name='visualize_d3'),
     
     ]
 if settings.DEBUG:

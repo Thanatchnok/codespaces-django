@@ -1,7 +1,24 @@
-html, body {
+body, html {
 
+  margin: 0;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
+.desktop-myblog {
+  height: 100%;
+}
+
+.div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlap {
+  flex: 1;
+  position: relative;
+  background-color: #fff; 
+}
 .search-name-list-of {
   position: absolute;
   width: 245px;
@@ -181,183 +198,111 @@ button {
 
 .desktop-review {
   margin-top: -67rem;
-    align-items: center;
-    background-color: #ffffff;
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .frameofbody {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    position: relative;
+    flex-shrink: 0;
+    padding: 2.2rem 5.9rem 4.1rem 4.2rem;
     width: 100%;
 
-    .frameofbody {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        padding: 2.2rem 5.9rem 4.1rem 4.2rem;
-        width: 100%;
-
-
-        .Showarea {
-            align-items: center;
-            display: flex;
-            flex-shrink: 0;
-            height: 46.7rem;
-            margin-left: -30rem;
-            justify-content: center;
-            /* Center content vertically */
-            width: 100%;
-            /* Full width */
-        }
-
-
-        .Picmovie {
-            border-radius: 1rem;
-            flex-shrink: 0;
-            height: 40;
-            margin-right: 7rem;
-            object-fit: cover;
-            vertical-align: top;
-            width: 20rem;
-        }
-
-        .rightframetop {
-            align-items: center;
-            background-color: #cdf3fc;
-            border-radius: 3rem;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            height: 25rem;
-            margin: 0rem 0rem 5rem 0rem;
-            padding: 3rem 4rem 4.6rem 6.55rem;
-            width: 45rem;
-
-            .textrighttopframe {
-                align-items: center;
-                display: flex;
-                flex-shrink: 0;
-                margin: 0rem 10rem 0.9rem 0rem;
-                width: calc(100% - 5.45rem);
-
-                .text1 {
-                    color: #000000;
-                    flex-shrink: 0;
-                    font-family: Inter, 'Source Sans Pro';
-                    font-size: 2rem;
-                    font-weight: 800;
-                    letter-spacing: -0.0792rem;
-                    line-height: 1.5;
-                    margin-right: 1rem;
-                    margin-top: -1rem;
-                    text-align: center;
-                    white-space: nowrap;
-                }
-
-                .text2 {
-                    color: #080808;
-                    flex-shrink: 0;
-                    font-family: Inter, 'Source Sans Pro';
-                    font-size: 1rem;
-                    font-weight: 500;
-                    letter-spacing: -0.0352rem;
-                    line-height: 1.5;
-                    margin-top: -1.5rem;
-                    text-align: center;
-                    white-space: nowrap;
-                }
-            }
-
-            .rightframebelow {
-                align-items: center;
-                display: flex;
-                flex-shrink: 0;
-                height: 19rem;
-                margin-left: 6.5rem;
-                margin-top: 2rem;
-
-                .picchosenone {
-                    flex-shrink: 0;
-                    height: 10rem;
-                    margin-right: 1rem;
-                    margin-top: -12rem;
-                    object-fit: cover;
-                    vertical-align: top;
-                    width: 10rem;
-                }
-
-                .picpopcorn {
-                    flex-shrink: 0;
-                    height: 10rem;
-                    margin: -12rem -1rem 0.8rem 0rem;
-                    object-fit: contain;
-                    vertical-align: top;
-                    width: 10rem;
-                }
-
-                .textrightbelowframe2 {
-                    flex-shrink: 0;
-                    height: calc(100% - 5.8rem);
-                    margin: 2.4rem 0rem 3.4rem 0rem;
-                    width: 26.2rem;
-
-                    .sub1textrightbelowframe {
-                        height: 10.8rem;
-                        position: relative;
-                        width: 14.1rem;
-
-                        .text3 {
-                            color: #000000;
-                            font-family: Inter, 'Source Sans Pro';
-                            font-size: 5rem;
-                            font-weight: 800;
-                            height: 9.6rem;
-                            left: 0rem;
-                            letter-spacing: -0.1408rem;
-                            line-height: 1.5;
-                            position: absolute;
-                            text-align: center;
-                            top: -10rem;
-                            white-space: nowrap;
-                            width: 14.1rem;
-                        }
-
-                        .text4 {
-                            color: #080808;
-                            font-family: Inter, 'Source Sans Pro';
-                            font-size: 1rem;
-                            font-weight: 500;
-                            height: 2.4rem;
-                            left: 0rem;
-                            letter-spacing: -0.0352rem;
-                            line-height: 1.5;
-                            position: absolute;
-                            text-align: center;
-                            top: 1rem;
-                            white-space: nowrap;
-                            width: 11.9rem;
-                        }
-                    }
-
-                    .text5 {
-                        color: #080808;
-                        font-family: Inter, 'Source Sans Pro';
-                        font-size: 1rem;
-                        font-weight: 500;
-                        line-height: 1.5;
-                        margin-top: -7rem;
-                        margin-left: -2.5rem;
-                        text-align: center;
-                        white-space: nowrap;
-                        width: 100%;
-                    }
-                }
-            }
-        }
+    .Showarea {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      height: 46.7rem;
+      margin-left: -30rem;
+      justify-content: center;
+      width: 100%;
     }
 
- }
+    .Picmovie {
+      border-radius: 1rem;
+      
+      height: 40;
+      margin-right: 10rem;
+      object-fit: cover;
+      vertical-align: top;
+      width: 20rem;
+    }
+
+    .rightframetop {
+      align-items: center;
+      background-color: #cdf3fc;
+      border-radius: 3rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      height: 25rem;
+      margin: 0rem 0rem 5rem 0rem;
+      padding: 3rem 4rem 4.6rem 6.55rem;
+      width: 40rem;
+
+      .textrighttopframe {
+        
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        margin: 0rem 10rem 0.9rem 0rem;
+        width: 100%;
+
+        .text1 {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2rem;
+          font-weight: 800;
+          letter-spacing: -0.0792rem;
+          line-height: 1.5;
+          margin-right: 0rem;
+          margin-top: -1rem;
+          text-align: center;
+          white-space: nowrap;
+        }
+      }
+
+      .rightframebelow {
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        height: 19rem;
+        margin-left: 6.5rem;
+        margin-top: 2rem;
+
+        .picchosenone {
+          flex-shrink: 0;
+          height: 10rem;
+          margin-right: 5rem;
+          margin-left: -6rem;
+          margin-top: -12rem;
+          object-fit: cover;
+          vertical-align: top;
+          width: 10rem;
+        }
+
+        .picpopcorn {
+          flex-shrink: 0;
+          height: 10rem;
+          margin: -12rem -1rem 0.8rem 0rem;
+          object-fit: contain;
+          vertical-align: top;
+          width: 10rem;
+        }
+      }
+    }
+  }
+}
+
+ 
 
 ul,
 li {

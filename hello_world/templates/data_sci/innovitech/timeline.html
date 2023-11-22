@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="{% static 'timeline.css' %}">
     <title>Movie Review Design</title>
 </head>
 <body>
 
     <div class="container">
-
         
         <div class="box main-box">
-            <div class="box third-box">
+            <div class="tv-show" style="width: 100px; height: 41px;">
+                <a href="{% url 'homepage' %}">
+                    <button style=" width: 250%; height: 100%; font-size: 20px; font-weight: bold; color: blue;">Back to Homepage</button>
+                </a>
+            </div>
+            <div class="box third-box" style="margin-top: 20px;">
+                
                 <div><img class="profile-img" src="{% static 'img/profileimage01.jpg' %}" alt="User Profile"></div>
                 <div class="profile-section">
                     <h2>@userZeedZad</h2>
@@ -100,7 +107,10 @@
                     <button>Follow</button>
                 </div>
                 <br>
-                <div id="chart"></div>
+                <div style="width: 80%; margin: auto;">
+                    <canvas id="sentimentChart" width="400" height="200"></canvas>
+                </div>
+            
                 
                 <div class="show-more">Show more</div>
                 <div class="community-section">
@@ -115,62 +125,68 @@
                         <div class="image-wrapper"><img src="{% static 'img/communityImage06.jpg' %}" alt="Community Image 7"></div>
                         <div class="image-wrapper"><img src="{% static 'img/communityImage07.jpg' %}" alt="Community Image 8"></div>
                     </div>
+                
                 </div>
-                <button onclick="refreshPage()">Refresh Data</button>
+                <button id="refreshButton" onclick="refreshPage()">Refresh Data</button>
+
                 
             </div>
         </div>
         <script>
-                const movieData = [
-                { title: "Positive_review", score: 4, review: "Positive" },
-                { title: "Negative_review", score: 5, review: "Negative" },
-            
-                ];
-
-                const margin = { top: 20, right: 20, bottom: 30, left: 40 };
-                const width = 600 - margin.left - margin.right;
-                const height = 400 - margin.top - margin.bottom;
-
-                const svg = d3.select("#chart").append("svg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-                const x = d3.scaleBand()
-                .range([0, width])
-                .padding(0.1)
-                .domain(movieData.map(d => d.title));
-
-                const y = d3.scaleLinear()
-                .range([height, 0])
-                .domain([0, d3.max(movieData, d => d.score)]);
-
-                svg.selectAll(".bar")
-                .data(movieData)
-                .enter().append("rect")
-                .attr("class", "bar")
-                .attr("x", d => x(d.title))
-                .attr("width", x.bandwidth())
-                .attr("y", d => y(d.score))
-                .attr("height", d => height - y(d.score));
-
-                svg.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x));
-
-                svg.append("g")
-                .attr("class", "axis")
-                .call(d3.axisLeft(y));
-                function refreshPage() {
-                location.reload();
-            }   
-                    
-                            
+            document.addEventListener('DOMContentLoaded', function () {
+                const ctx = document.getElementById('sentimentChart').getContext('2d');
+        
+                async function fetchDataAndRenderChart() {
+                    try {
+                        // Fetch data from Django view
+                        const response = await fetch('/example/visualize_d3/');
+                        const data = await response.json();
+        
+                        console.log('Data fetched:', data);
+        
+                        // Clear existing chart
+                        if (window.myChart) {
+                            window.myChart.destroy();
+                        }
+        
+                        // Render the chart using fetched data
+                        window.myChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: data.sentiment,
+                                datasets: [{
+                                    label: 'Sentiment Counts',
+                                    data: data.counts,
+                                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                    borderColor: 'rgba(75, 192, 192, 1)',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    } catch (error) {
+                        console.error('Error fetching data:', error);
+                    }
+                }
+        
+                // Initial chart rendering
+                fetchDataAndRenderChart();
+        
+                // Add event listener to the button
+                const refreshButton = document.getElementById('refreshButton');
+                refreshButton.addEventListener('click', fetchDataAndRenderChart);
+            });
         </script>
         
-    
+        
+
+            
 </div>
 
 </body>
